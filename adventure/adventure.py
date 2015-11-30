@@ -26,6 +26,8 @@ if __name__ == "__main__":
                 print(option)
             choice = input("\nChoose action: ")
 
+
+
         # CALL A FUNCTION HERE TO HANDLE WHAT HAPPENS UPON USER'S CHOICE
         #    REMEMBER: the location = w.get_location(p.x, p.y) at the top of this loop will update the location if the
         #               choice the user made was just a movement, so only updating player's position is enough to change
