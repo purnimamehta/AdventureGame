@@ -197,12 +197,7 @@ class World:
         self.x = x
         self.y = y
 
-        if
-
-        buildings = {'library': { postion :' north of the cct building, 4th floor,', firstfloor:' Go south', turnleft: ' No way ', turnright: ' No way'},
-                     'firstfloor': {desciption : ' you are on the 1st floor on the library', gooutsideoflib : 'there is a starbucks', turnleft : ' no way ', turnright: ' no way', Goto4thfloor: ' back at the forth floor'}
-                     'gooutsideoflib': { description: ' you are now infront of the warm smelling starbucks', goinsidestarbucks: ' buy or not buy something', gobackintolib: ' now back in the library', gooutside: 'IB is right infront of you', turnleft: ' no way'}
-                     }
+        if buildings = {'library': { postion :' north of the cct building, 4th floor,', firstfloor:' Go south', turnleft: ' No way ', turnright: ' No way '}, {'firstfloor': {desciption : ' you are on the 1st floor on the library', gooutsideoflib : 'there is a starbucks', turnleft : ' no way ', turnright: ' no way', Goto4thfloor: ' back at the forth floor'}, {'gooutsideoflib': { description: ' you are now infront of the warm smelling starbucks', goinsidestarbucks: ' buy or not buy something', gobackintolib: ' now back in the library', gooutside: 'IB is right infront of you', turnleft: ' no way'}}
 
         sec = {}
         for i in range(buildings):
