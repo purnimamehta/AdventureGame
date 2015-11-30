@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71fbb27f-b4f8-40b3-9ccd-15399d290c42" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/adventure/Map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/adventure.py" afterPath="$PROJECT_DIR$/adventure/adventure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/game_data.py" afterPath="$PROJECT_DIR$/adventure/game_data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/map.txt" afterPath="$PROJECT_DIR$/adventure/map.txt" />
     </list>
     <ignored path="AdventureGame.iws" />
@@ -81,8 +78,8 @@
       <file leaf-file-name="map.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure/map.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46979865">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.23489933">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -109,6 +106,7 @@
         <option value="$PROJECT_DIR$/adventure/Map" />
         <option value="$PROJECT_DIR$/adventure/adventure.py" />
         <option value="$PROJECT_DIR$/adventure/game_data.py" />
+        <option value="$PROJECT_DIR$/adventure/map.txt" />
       </list>
     </option>
   </component>
@@ -444,8 +442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure/map.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46979865">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.23489933">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding />
         </state>
       </provider>
