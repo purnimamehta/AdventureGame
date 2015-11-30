@@ -24,12 +24,25 @@ class Player:
         :param dy:
         :return:
         '''
+
+        global location
+        newposition = map[location][dx,dy]
+        if newposition == -1:
+            print('This way is blocked')
+        elif newposition >= 0:
+            move(dx,dy)
+        else:
+            location = newposition
+
         pass
 
     def move_north(self):
         '''These integer directions are based on how the map must be stored
         in our nested list World.map'''
-        self.move(0,-1)
+        """Go to the 4th floor of the library, if possible."""
+
+        self.move(0,0)
+
 
     def move_south(self):
         self.move(0,1)
@@ -47,6 +60,15 @@ class Player:
         :return:
         '''
 
+        itemadd = item.lower()
+        if itemadd == ' ':
+            print (' take what?')
+            return
+
+
+
+
+
     def remove_item(self, item):
         '''
         Remove item from inventory.
@@ -54,8 +76,29 @@ class Player:
         :return:
         '''
 
+
+
     def get_inventory(self):
         '''
         Return inventory.
         :return:
         '''
+
+        if len(get_inventory) == 0:
+            print('Inventory:\n ( nothing)')
+            return
+        itemcount = {}
+        for item in inventory:
+            if item in itemcount.keys():
+                itemcount[item] += 1
+
+            else:
+                itemcount[item] = 1
+        print('Inventory: ')
+        for item in set(inventory):
+            if item[item] > 1:
+                print('  %s (%s)'  % (item, itemcount[item]))
+            else:
+                print ('  '  + item)
+
+

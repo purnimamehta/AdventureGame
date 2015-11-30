@@ -1,1 +1,6 @@
 # FILL THIS IN WITH ITEM DATA
+items = { ' Tcard': 0 , 'lighter': 1, 'gum': 2, 'pen' : 3}
+tk_items = [("There is a card of the floor,", " A Tcard"),
+            (There is a small box nearby", " A lighter"),
+            (" A colourful box in the elevator", "A gum packet"),
+            (" A worm on the floor", " a pen!")]

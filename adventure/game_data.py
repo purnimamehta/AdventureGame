@@ -1,8 +1,9 @@
 class Location:
 
     def __init__(self):
-        '''Creates a new location.
-
+        '''Creates a new location.          
+        ADD NEW ATTRIBUTES TO THIS CLASS HERE TO STORE DATA FOR EACH LOCATION.
+        
         Data that could be associated with each Location object:
         a position in the world map,
         a brief description,
@@ -18,14 +19,30 @@ class Location:
         The only thing you must NOT change is the name of this class: Location.
         All locations in your game MUST be represented as an instance of this class.
         '''
+
+        self.position = position
+        self.briefdesc = briefdesc
+        self.longdesc = longdesc
+        self.commands = commands
+        self.items = items
+
         pass
+
+
 
     def get_brief_description (self):
         '''Return str brief description of location.'''
+
+
         pass
 
     def get_full_description (self):
         '''Return str long description of location.'''
+        file = open(filename, 'r')
+        for line in file:
+            line[1] = line.readline()
+
+
         pass
 
     def available_actions(self):
@@ -61,6 +78,7 @@ class Item:
 
     def get_starting_location (self):
         '''Return int location where item is first found.'''
+
 
         pass
 
@@ -106,14 +124,26 @@ class World:
     def load_map(self, filename):
         '''
         THIS FUNCTION MUST NOT BE RENAMED OR REMOVED.
-        Store map from filename (map.txt) in the variable "self.map" as a nested list of integers like so:
+        Store map from filename (map.txt) in the variable "self.map" as a nested list of strings OR integers like so:
             1 2 5
             3 -1 4
-        becomes [[1,2,5], [3,-1,4]]
+        becomes [['1','2','5'], ['3','-1','4']] OR [[1,2,5], [3,-1,4]]
         RETURN THIS NEW NESTED LIST.
         :param filename: string that gives name of text file in which map data is located
-        :return: return nested list of integers representing map of game world as specified above
+        :return: return nested list of strings/integers representing map of game world as specified above
         '''
+
+        #http://letstalkdata.com/2014/08/how-to-write-a-text-adventure-in-python-part-4-the-game-loop/
+
+        file = open(filename, "r")
+        l = []
+        for line in file:
+            line = line.strip()
+            line = line.split(' ')
+            line = map(int,line)
+            l.append(line)
+        file.close()
+        return l
         pass
 
     def load_locations(self, filename):
@@ -127,6 +157,16 @@ class World:
         :return:
         '''
 
+        file = open(filename, "r")
+        filenametxt = f.read()
+        d = filename.loads(filenametxt)
+
+
+
+
+
+
+
         pass
 
     def load_items(self, filename):
@@ -137,6 +177,12 @@ class World:
         :param filename:
         :return:
         '''
+        if item not in buildings[location]:
+            print(" no item")
+            return
+
+
+
 
         pass
 
@@ -148,5 +194,30 @@ class World:
         :param y: integer y representing y-coordinate of world map
         :return: Return Location object associated with this location if it does. Else, return None.
         '''
+        self.x = x
+        self.y = y
+
+        if
+
+        buildings = {'library': { postion :' north of the cct building, 4th floor,', firstfloor:' Go south', turnleft: ' No way ', turnright: ' No way'},
+                     'firstfloor': {desciption : ' you are on the 1st floor on the library', gooutsideoflib : 'there is a starbucks', turnleft : ' no way ', turnright: ' no way', Goto4thfloor: ' back at the forth floor'}
+                     'gooutsideoflib': { description: ' you are now infront of the warm smelling starbucks', goinsidestarbucks: ' buy or not buy something', gobackintolib: ' now back in the library', gooutside: 'IB is right infront of you', turnleft: ' no way'}
+                     }
+
+        sec = {}
+        for i in range(buildings):
+            index = i[0]
+            postion = index
+
+
+
+        #http://inventwithpython.com/blog/2014/12/11/making-a-text-adventure-game-with-the-cmd-and-textwrap-python-modules/
+        #https://github.com/soapy1/TextAdventure/blob/master/textAdventure.py
+        #https://www.youtube.com/watch?v=8CDePunJlck
+
+
+
+
+
 
         pass
