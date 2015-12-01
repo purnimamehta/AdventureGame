@@ -1,10 +1,12 @@
+
+
 class Location:
     global position
 
     def __init__(self):
-        '''Creates a new location.
+        '''Creates a new location.          
         ADD NEW ATTRIBUTES TO THIS CLASS HERE TO STORE DATA FOR EACH LOCATION.
-
+        
         Data that could be associated with each Location object:
         a position in the world map,
         a brief description,
@@ -15,7 +17,7 @@ class Location:
         Store these as you see fit.
         This is just a suggested starter class for Location.
         You may change/add parameters and the data available for each Location class as you see fit.
-
+  
         The only thing you must NOT change is the name of this class: Location.
         All locations in your game MUST be represented as an instance of this class.
         '''
@@ -26,6 +28,8 @@ class Location:
         self.longdesc = longdesc
         self.commands = commands
         self.items = items
+        self.times_visited = 0
+
 
         pass
 
@@ -154,12 +158,46 @@ class World:
         :return:
         '''
         file = open(filename , 'r')
-        l = []
+        return_location = {}
         for line in file:
 
-            if i == "location":
-             readline()
+            index_of_location =""
+            points = ""
+            briefdesc = ""
+            longdesc = ""
+            commands = []
 
+
+            items = None
+            times_visted = 0
+
+            if  "Location:" in line:
+                index_of_location = int(line.split(" ")[1].rstrip("\n"))
+
+            if "Points:" in line:
+                points = int(line.split(" ")[1].rstrip("\n"))
+
+            if "brief description:" in line :
+
+                briefdesc = line.strip("brief description:")
+
+
+            if "long description:" in line:
+                longdesc = line.strip("long description:").rstrip("\n")
+
+
+            if "list of commands:" in line :
+                commands = line.strip("list of commands:").rstrip("\n")
+                commands = commands.split(",")
+                print(commands)
+
+
+
+            location = Location(index_of_location,briefdesc,longdesc,commands,items,times_visted)
+
+            return_location [index_of_location] = location
+
+            return return_location
 
         pass
 
@@ -211,3 +249,5 @@ class World:
 
 
         pass
+x = World("map.txt","locations.txt","items.txt")
+print(x.load_locations("locations.txt"))
