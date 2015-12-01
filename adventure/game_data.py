@@ -1,9 +1,10 @@
 class Location:
+    global position
 
     def __init__(self):
-        '''Creates a new location.          
+        '''Creates a new location.
         ADD NEW ATTRIBUTES TO THIS CLASS HERE TO STORE DATA FOR EACH LOCATION.
-        
+
         Data that could be associated with each Location object:
         a position in the world map,
         a brief description,
@@ -12,13 +13,13 @@ class Location:
         items that are available in the location,
         and whether or not the location has been visited before.
         Store these as you see fit.
-
         This is just a suggested starter class for Location.
         You may change/add parameters and the data available for each Location class as you see fit.
-  
+
         The only thing you must NOT change is the name of this class: Location.
         All locations in your game MUST be represented as an instance of this class.
         '''
+
 
         self.position = position
         self.briefdesc = briefdesc
@@ -33,14 +34,14 @@ class Location:
     def get_brief_description (self):
         '''Return str brief description of location.'''
 
+        return briefdesc
 
         pass
 
     def get_full_description (self):
         '''Return str long description of location.'''
-        file = open(filename, 'r')
-        for line in file:
-            line[1] = line.readline()
+
+        return longdesc
 
 
         pass
@@ -61,12 +62,10 @@ class Item:
         the integer "target" being the item's target location, and
         integer target_points being the number of points player gets
         if item is deposited in target location.
-
         This is just a suggested starter class for Item.
         You may change these parameters and the data available for each Item class as you see fit.
         Consider every method in this Item class as a "suggested method":
                 -- Suggested Method (You may remove/modify/rename these as you like) --
-
         The only thing you must NOT change is the name of this class: Item.
         All item objects in your game MUST be represented as an instance of this class.
         '''
@@ -102,10 +101,8 @@ class World:
     def __init__(self, mapdata, locdata, itemdata):
         '''
         Creates a new World object, with a map, and data about every location and item in this game world.
-
         You may ADD parameters/attributes/methods to this class as you see fit.
         BUT DO NOT RENAME OR REMOVE ANY EXISTING METHODS/ATTRIBUTES.
-
         :param mapdata: name of text file containing map data in grid format (integers represent each location, separated by space)
                         map text file MUST be in this format.
                         E.g.
@@ -156,15 +153,12 @@ class World:
         :param filename:
         :return:
         '''
+        file = open(filename , 'r')
+        l = []
+        for line in file:
 
-        file = open(filename, "r")
-        filenametxt = f.read()
-        d = filename.loads(filenametxt)
-
-
-
-
-
+            if i == "location":
+             readline()
 
 
         pass
@@ -177,9 +171,16 @@ class World:
         :param filename:
         :return:
         '''
-        if item not in buildings[location]:
-            print(" no item")
-            return
+        file = open(filename, 'r')
+        L = []
+        for items in filename:
+            if items in locations:
+                if items
+
+
+
+
+
 
 
 
@@ -194,18 +195,9 @@ class World:
         :param y: integer y representing y-coordinate of world map
         :return: Return Location object associated with this location if it does. Else, return None.
         '''
-        self.x = x
-        self.y = y
+        if location
 
-        if buildings =
-            {'library': { postion :' north of the cct building, 4th floor,', firstfloor:' Go south', turnleft: ' No way ', turnright: ' No way '},
-            {'firstfloor': {desciption : ' you are on the 1st floor on the library', gooutsideoflib : 'there is a starbucks', turnleft : ' no way ', turnright: ' no way', Goto4thfloor: ' back at the forth floor'},
-            {'gooutsideoflib': { description: ' you are now infront of the warm smelling starbucks', goinsidestarbucks: ' buy or not buy something', gobackintolib: ' now back in the library', gooutside: 'IB is right infront of you', turnleft: ' no way'}}
 
-        sec = {}
-        for i in range(buildings):
-            index = i[0]
-            postion = index
 
 
 
