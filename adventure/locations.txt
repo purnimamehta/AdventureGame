@@ -4,23 +4,48 @@ That way is blocked.
 That way is blocked.
 END
 
-LOCATION 1
+LOCATION 1 - bathroom
 0
-You are on the first floor of the UTM Library. There is an empty study room to the South, an exit from the library to the North.
-You are on the first floor of the UTM Library. It's usually crowded at this time of the day, but today it's eerily quiet.
-Only a few students are studying inside one of the study rooms. You better not disturb them. A librarian stands near the
-service desk, looking bored and sleepy. There is an empty study room to the South, an exit from the library to the North.
+
 END
 
-LOCATION 2
+LOCATION 2 - library 2nd floor
+0
+You are on the second floor of the UTM Library. There is a washroom to the South and stairs leading to the third floor to the East.
+You are on the second floor of the UTM Library. It's usually crowded at this time of the day, but today it's eerily quiet.
+Only a few students are studying inside one of the study rooms. You better not disturb them. A librarian stands near the
+service desk, looking bored and sleepy. There is a washroom to the South and stairs leading to the third floor to the East.
+END
+
+LOCATION 3 - library 3rd floor
+0
+You are on the third floor. There is a study room to the South.
+You are on the third floor and its a complete mess. Looks like someone threw a surprise birthday party and left everything there for the janitors to clean up.
+Maybe your cheat sheet is on the floor somewhere? But no one is around to help you clean it, what will you do?
+END
+
+LOCATION 4 - study room
 0
 This study room is completely empty.
 You are in an empty study room. And by empty, we mean, absolutely empty. All the tables and chairs have been taken out,
 the whiteboards taken off the wall, not even the carpeting is left. Are they planning to do something else with this space?
 END
 
-LOCATION 3
-0
-You are outside of the library. There is a Starbucks to the North.
-You are outside of the library in a crowded hallway. There is a smell of coffee in the air. There is a Starbucks to the North.
-END
+LOCATION 5 - wilderness trail
+
+LOCATION 6 - deerfield hall
+
+LOCATION 7 - ccit building
+
+LOCATION 8 - long path
+
+LOCATION 9 - starbucks
+
+LOCATION 10 - hallway
+
+LOCATION 11 - IB
+
+LOCATION 12 - catwalk
+
+LOCATION 13 - path
+
