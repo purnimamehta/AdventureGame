@@ -18,12 +18,19 @@ class Location:
 
         The only thing you must NOT change is the name of this class: Location.
         All locations in your game MUST be represented as an instance of this class.
-        :param: position = coordinate
-        :param
-        :param
-        :param
+        :param: position: coordinate of where the player is
+        :param: brief_description: a small description on the location
+        :param: long_description: a longer description on the location
+        :param: commands: directions to move
+        :param: items: items that in the location
+        :param: times_visted: how many times player visited the location before
         Example
-        get_brief_description: "
+        position: ( 0 , 0)
+        brief_description: " You are in Starbucks."
+        long_description: " You are in the cozy warmest place of them all at UTM. It's where everyone comes to get their warm spice lattes. You are are starbuck."
+        commands: North, South, East, West
+        items: " There is gum on the fourth floor of the library"
+        times_visited: library visited: 1
         '''
 
 
@@ -78,6 +85,15 @@ class Item:
                 -- Suggested Method (You may remove/modify/rename these as you like) --
         The only thing you must NOT change is the name of this class: Item.
         All item objects in your game MUST be represented as an instance of this class.
+        :param: name: name of the item
+        :param: start: where the item is first located
+        :param: target: where the item should go ( target location)
+        :param: target_points: how many points does the item count for
+        Example
+        name: "gum"
+        start: "library fourth floor"
+        target: "in players mouth"
+        target_points: " 2 points"
         '''
 
         self.name = name
@@ -142,6 +158,10 @@ class World:
         RETURN THIS NEW NESTED LIST.
         :param filename: string that gives name of text file in which map data is located
         :return: return nested list of strings/integers representing map of game world as specified above
+        example:
+        1   0   -1
+        2   3   4
+        -1  5   6
         '''
 
         #http://letstalkdata.com/2014/08/how-to-write-a-text-adventure-in-python-part-4-the-game-loop/
@@ -165,7 +185,8 @@ class World:
         Make sure the Location class is used to represent each location.
         Change this docstring as needed.
         :param filename:
-        :return:
+        :return: the list return_location
+        Example:
         '''
         file = open(filename , 'r')
         return_location = {}
@@ -214,7 +235,7 @@ class World:
         Make sure the Item class is used to represent each item.
         Change this docstring accordingly.
         :param filename:
-        :return:
+        :return: the list return_items
         '''
 
         file = open(filename, 'r')

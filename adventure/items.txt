@@ -1,10 +1,6 @@
-# FILL THIS IN WITH ITEM DATA
-1 10 5 Cheat Sheet
-
-
-
-items = { ' Tcard': 0 , 'lighter': 1, 'gum': 2, 'pen' : 3}
-tk_items = [("There is a card of the floor,", " A Tcard"),
-            (There is a small box nearby", " A lighter"),
-            (" A colourful box in the elevator", "A gum packet"),
-            (" A worm on the floor", " a pen!")]
+26 45 10 Cheat Sheet
+14 45 10 T-Card
+23 45 10 Pencil
+34 45 5 PowerUp1
+33 45 3 PowerUp2
+14 45 8 Coffee
