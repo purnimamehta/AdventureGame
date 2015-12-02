@@ -67,9 +67,6 @@ class Player:
 
         return True
 
-
-
-
     def get_inventory(self):
         '''
         Return inventory.

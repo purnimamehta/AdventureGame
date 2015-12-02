@@ -1,7 +1,7 @@
 class Location:
 
 
-    def __init__(self,position, brief_description,long_description,commands,items, times_visited):
+    def __init__(self,position, brief_description,long_description,points,commands,items, times_visited):
         '''Creates a new location.
         ADD NEW ATTRIBUTES TO THIS CLASS HERE TO STORE DATA FOR EACH LOCATION.
 
@@ -47,7 +47,7 @@ class Location:
     def get_full_description (self):
         '''Return str long description of location.'''
 
-        return self.longdesc
+        return self.long_description
 
 
 
@@ -61,7 +61,8 @@ class Location:
 
         return self.commands
 
-
+    def __str__(self):
+        return self.brief_description + " | " + self.long_description + " | " + self.position
 
 class Item:
 
@@ -170,47 +171,41 @@ class World:
         return_location = {}
         for line in file:
 
-            index_of_location =""
+            index_of_location = ""
             points = ""
             briefdesc = ""
             longdesc = ""
             commands = []
 
-
             items = None
             times_visted = 0
 
-            if  "Location:" in line:
+            if "Location:" in line:
                 index_of_location = int(line.split(" ")[1].rstrip("\n"))
-
+            line = file.readline()
             if "points:" in line:
                 points = int(line.split(" ")[1].rstrip("\n"))
+            line = file.readline()
 
-            if "brief description:" in line :
-
+            if "brief description:" in line:
                 briefdesc = line.strip("brief description:")
-
+            line = file.readline()
 
             if "long description:" in line:
                 longdesc = line.strip("long description:").rstrip("\n")
+            line = file.readline()
 
-
-            if "list of commands:" in line :
+            if "list of commands:" in line:
                 commands = line.strip("list of commands:").rstrip("\n")
                 commands = commands.split(",")
                 print(commands)
-
-
-
-            location = Location(index_of_location,briefdesc,longdesc,points, commands,items,times_visted)
-
-            return_location [index_of_location] = location
+            file.readline()
+            file.readline()
+            location = Location(index_of_location, briefdesc, longdesc, points, commands, items, times_visted)
+            print(str(location))
+            return_location[index_of_location] = location
 
             return return_location
-
-
-
-
 
 
     def load_items(self, filename):
@@ -231,7 +226,6 @@ class World:
             briefdesc = ""
             longdesc = ""
             commands = []
-
 
 
             times_visted = 0
