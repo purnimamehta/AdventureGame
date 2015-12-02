@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71fbb27f-b4f8-40b3-9ccd-15399d290c42" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/items.txt" afterPath="$PROJECT_DIR$/adventure/items.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/map.txt" afterPath="$PROJECT_DIR$/adventure/map.txt" />
     </list>
     <ignored path="AdventureGame.iws" />
@@ -49,8 +48,8 @@
       <file leaf-file-name="map.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure/map.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46979865">
-              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.13422818">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -485,8 +484,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure/map.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46979865">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.13422818">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
