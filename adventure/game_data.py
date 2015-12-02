@@ -50,13 +50,10 @@ class Location:
         return self.brief_description
 
 
-
     def get_full_description (self):
         '''Return str long description of location.'''
 
         return self.long_description
-
-
 
 
     def available_actions(self):
@@ -105,25 +102,19 @@ class Item:
         '''Return int location where item is first found.'''
         return self.start
 
-        pass
-
     def get_name(self):
         '''Return the str name of the item.'''
 
         return self.name
 
-
-        pass
-
     def get_target_location (self):
         '''Return item's int target location where it should be deposited.'''
         return self.target
-        pass
 
     def get_target_points (self):
         '''Return int points awarded for depositing the item in its target location.'''
         return self.target_points
-        pass
+
 
 class World:
 
@@ -175,7 +166,7 @@ class World:
             l.append(line)
         file.close()
         return l
-        pass
+
 
     def load_locations(self, filename):
         '''
@@ -239,47 +230,14 @@ class World:
         '''
 
         file = open(filename, 'r')
-        return_items = {}
+        return_items = []
         for line in file:
+            lolol = line.split(" ")
+            return_items.append(lolol)
+        file.close()
 
-            index_of_items =""
-            points = ""
-            briefdesc = ""
-            longdesc = ""
-            commands = []
+        return return_items
 
-
-            times_visted = 0
-
-            if  "Location:" in line:
-                index_of_item = int(line.split(" ")[1].rstrip("\n"))
-
-            if "Points:" in line:
-                points = int(line.split(" ")[1].rstrip("\n"))
-
-            if "brief description:" in line :
-
-                briefdesc = line.strip("brief description:")
-
-
-            if "long description:" in line:
-                longdesc = line.strip("long description:").rstrip("\n")
-
-
-            if "list of commands:" in line :
-                commands = line.strip("list of commands:").rstrip("\n")
-                commands = commands.split(",")
-                print(commands)
-
-
-
-            items = items(index_of_items,briefdesc,longdesc,points,commands,times_visted)
-
-            return_items [index_of_items] = items
-
-            return return_items
-
-        pass
 
     def get_location(self, x, y):
         '''Check if location exists at location (x,y) in world map.
@@ -290,8 +248,8 @@ class World:
         :return: Return Location object associated with this location if it does. Else, return None.
         '''
 
-        for cordinates in Location:
-            if y == y and x == x :
+        for coordinates in Location:
+            if y == y and x == x:
                 return Location
             else:
                 return None
@@ -302,11 +260,6 @@ class World:
         #https://www.youtube.com/watch?v=8CDePunJlck
 
 
-
-
-
-
-        pass
 
 x = World("map.txt","locations.txt","items.txt")
 print(x.load_map("map.txt"))

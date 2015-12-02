@@ -4,13 +4,7 @@ That way is blocked.
 That way is blocked.
 END
 
-LOCATION 1 - bathroom
-0
-brief description: You are in the bathroom inside the UTM Library. You can take a path that will lead you somewhere or go back north into the library.
-long description: Oh no! Someone decided it would be funny to toilet paper the entire bathroom. Did you leave your T-Card in here? How will you find out?
-END
-
-LOCATION 2 - library 2nd floor
+LOCATION 01 - Library
 0
 brief description: You are on the second floor of the UTM Library. There is a washroom to the South and stairs leading to the third floor to the East.
 long description: You are on the second floor of the UTM Library. It's usually crowded at this time of the day, but today it's eerily quiet.
@@ -18,46 +12,33 @@ Only a few students are studying inside one of the study rooms. You better not d
 service desk, looking bored and sleepy. There is a washroom to the South and stairs leading to the third floor to the East.
 END
 
-LOCATION 3 - library 3rd floor
+
+LOCATION 02 - Library
 0
-brief description: You are on the third floor. There is a study room to the South.
-long description: You are on the third floor and its a complete mess. Looks like someone threw a surprise birthday party and left everything there for the janitors to clean up.
-Maybe your cheat sheet is on the floor somewhere? But no one is around to help you clean it, what will you do?
+brief description: You're in the library.
+long description: You're in the library. Not a lot to see here, you can go south to the bathroom.
 END
 
-LOCATION 4 - study room
+LOCATION 03 - Hallway
 0
-brief description: This study room is completely empty. There is a long path leading to Starbucks on the South.
-long description: You are in an empty study room. And by empty, we mean, absolutely empty. All the tables and chairs have been taken out,
-the whiteboards taken off the wall, not even the carpeting is left. Are they planning to do something else with this space?
+brief description: You're in a hallway. Go north to the library or south into the bathroom.
+long description: You're in a hallway. There is a painting on the wall but no safe behind it. Keep moving north to the library or south to the bathroom.
 END
 
-LOCATION 5 - wilderness trail
+LOCATION 04 - bathroom
 0
-brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
-long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
-Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
+brief description: You are in the bathroom outside the UTM Library. Take a path south into the unknown or north into the known.
+long description: Oh no! Someone decided it would be funny to toilet paper the entire bathroom. Did you leave your T-Card in here? How will you find out?
 END
 
-LOCATION 6 - deerfield hall
-0
-brief description: You're in Deerfield Hall. Nothing to see here. Go south to go back to the Wilderness Trail.
-long description: This is Deerfield Hall, nothing much to see. It has great food if you're hungry but you're going to be late for the exam!
-END
 
-LOCATION 7 - ccit building
-0
-brief description: This is the CCIT building. It's so beautiful, you stop to admire it and take some pictures.
-long description: This is the CCIT building. N
-END
-
-LOCATION 8 - long path
+LOCATION 08 - long path
 0
 brief description:
 long description:
 END
 
-LOCATION 9 - starbucks
+LOCATION 09 - starbucks
 0
 brief description:
 long description:
@@ -87,3 +68,210 @@ brief description:
 long description:
 END
 
+LOCATION 14 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 15 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 16 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 17 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 18 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 19 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 20 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 21 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 22 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 23 - study room
+0
+brief description: This study room is completely empty. There is a long path leading to Starbucks on the South.
+long description: You are in an empty study room. And by empty, we mean, absolutely empty. All the tables and chairs have been taken out,
+the whiteboards taken off the wall, not even the carpeting is left. Are they planning to do something else with this space?
+END
+
+LOCATION 24 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 25 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 26 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 27 - wilderness trail
+0
+brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
+long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
+Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
+END
+
+LOCATION 28 - wilderness trail
+0
+brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
+long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
+Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
+END
+
+LOCATION 29 - wilderness trail
+0
+brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
+long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
+Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
+END
+
+
+LOCATION 30 - wilderness trail
+0
+brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
+long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
+Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
+END
+
+LOCATION 31 - wilderness trail
+0
+brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
+long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
+Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
+END
+
+LOCATION 32 - wilderness trail
+0
+brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
+long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
+Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
+END
+
+LOCATION 33 - deerfield hall
+0
+brief description: You're in Deerfield Hall. Nothing to see here. Go south to go back to the Wilderness Trail.
+long description: This is Deerfield Hall, nothing much to see. It has great food if you're hungry but you're going to be late for the exam!
+END
+
+LOCATION 07 - ccit building
+0
+brief description: This is the CCIT building. It's so beautiful, you stop to admire it and take some pictures.
+long description: This is the CCIT building. N
+END
+
+
+LOCATION 35 - path
+0
+brief description:
+long description:
+END
+
+
+LOCATION 36 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 37 - library 3rd floor
+0
+brief description: You are on the third floor. There is a study room to the South.
+long description: You are on the third floor and its a complete mess. Looks like someone threw a surprise birthday party and left everything there for the janitors to clean up.
+Maybe your cheat sheet is on the floor somewhere? But no one is around to help you clean it, what will you do?
+END
+
+LOCATION 38 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 39 - path
+0
+brief description:
+long description:
+END
+
+LOCATION 40 - path
+0
+brief description:
+long description:
+END
+
+
+LOCATION 41 - path
+0
+brief description:
+long description:
+END
+
+
+LOCATION 42 - path
+0
+brief description:
+long description:
+END
+
+
+LOCATION 43 - path
+0
+brief description:
+long description:
+END
+
+
+LOCATION 44 - path
+0
+brief description:
+long description:
+END
+
+
+LOCATION 45 - IB
+0
+brief description: This is IB.
+long description:
+END
