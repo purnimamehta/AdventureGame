@@ -1,4 +1,8 @@
 # FILL THIS IN WITH ITEM DATA
+1 10 5 Cheat Sheet
+
+
+
 items = { ' Tcard': 0 , 'lighter': 1, 'gum': 2, 'pen' : 3}
 tk_items = [("There is a card of the floor,", " A Tcard"),
             (There is a small box nearby", " A lighter"),
