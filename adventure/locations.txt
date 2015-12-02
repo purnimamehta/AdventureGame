@@ -34,20 +34,21 @@ END
 
 LOCATION 5 - wilderness trail
 0
-brief description:
-long description:
+brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
+long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
+Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
 END
 
 LOCATION 6 - deerfield hall
 0
-brief description:
-long description:
+brief description: You're in Deerfield Hall. Nothing to see here. Go south to go back to the Wilderness Trail.
+long description: This is Deerfield Hall, nothing much to see. It has great food if you're hungry but you're going to be late for the exam!
 END
 
 LOCATION 7 - ccit building
 0
-brief description:
-long description:
+brief description: This is the CCIT building. It's so beautiful, you stop to admire it and take some pictures.
+long description: This is the CCIT building. N
 END
 
 LOCATION 8 - long path

@@ -6,7 +6,6 @@ class Player:
         :param x: x-coordinate of position on map
         :param y: y-coordinate of position on map
         :return:
-
         This is a suggested starter class for Player.
         You may add new parameters / attributes / methods to this class as you see fit.
         Consider every method in this Player class as a "suggested method":
@@ -24,15 +23,8 @@ class Player:
         :param dy:
         :return:
         '''
-
-        global location
-        newposition = map[location][dx,dy]
-        if newposition == -1:
-            print('This way is blocked')
-        elif newposition >= 0:
-            move(dx,dy)
-        else:
-            location = newposition
+        self.x += dx
+        self.y += dy
 
         pass
 
@@ -60,14 +52,9 @@ class Player:
         :return:
         '''
 
-        itemadd = item.lower()
-        if itemadd == ' ':
-            print (' take what?')
-            return
-
-
-
-
+        if item not in self.inventory:
+            self.inventory.append(item)
+        return True
 
     def remove_item(self, item):
         '''
@@ -75,6 +62,11 @@ class Player:
         :param item:
         :return:
         '''
+        if item in self.inventory:
+            self.inventory.remove(item)
+
+        return True
+
 
 
 
@@ -84,21 +76,6 @@ class Player:
         :return:
         '''
 
-        if len(get_inventory) == 0:
-            print('Inventory:\n ( nothing)')
-            return
-        itemcount = {}
-        for item in inventory:
-            if item in itemcount.keys():
-                itemcount[item] += 1
+        return self.inventory
 
-            else:
-                itemcount[item] = 1
-        print('Inventory: ')
-        for item in set(inventory):
-            if item[item] > 1:
-                print('  %s (%s)'  % (item, itemcount[item]))
-            else:
-                print ('  '  + item)
-
-
+#http://codereview.stackexchange.com/questions/37677/a-small-python-text-adventure-frame

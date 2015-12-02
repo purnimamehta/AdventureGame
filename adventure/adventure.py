@@ -6,13 +6,16 @@ if __name__ == "__main__":
     PLAYER = Player(0,0) # set starting location of player; you may change the x, y coordinates here as appropriate
 
     menu = ["look", "inventory", "score", "quit", "back"]
+    #same as command in calender
 
     while not PLAYER.victory:
         location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
+
         # ENTER CODE HERE TO PRINT LOCATION DESCRIPTION
         # depending on whether or not it's been visited before,
         #   print either full description (first time visit) or brief description (every subsequent visit)
+
 
         print("What to do? \n")
         print("[menu]")
@@ -25,8 +28,6 @@ if __name__ == "__main__":
             for option in menu:
                 print(option)
             choice = input("\nChoose action: ")
-
-
 
         # CALL A FUNCTION HERE TO HANDLE WHAT HAPPENS UPON USER'S CHOICE
         #    REMEMBER: the location = w.get_location(p.x, p.y) at the top of this loop will update the location if the

@@ -1,12 +1,10 @@
-
-
 class Location:
-    global position
 
-    def __init__(self):
-        '''Creates a new location.          
+
+    def __init__(self,position, brief_description,long_description,commands,items, times_visited):
+        '''Creates a new location.
         ADD NEW ATTRIBUTES TO THIS CLASS HERE TO STORE DATA FOR EACH LOCATION.
-        
+
         Data that could be associated with each Location object:
         a position in the world map,
         a brief description,
@@ -17,38 +15,42 @@ class Location:
         Store these as you see fit.
         This is just a suggested starter class for Location.
         You may change/add parameters and the data available for each Location class as you see fit.
-  
+
         The only thing you must NOT change is the name of this class: Location.
         All locations in your game MUST be represented as an instance of this class.
+        :param: position = coordinate
+        :param
+        :param
+        :param
+        Example
+        get_brief_description: "
         '''
 
 
         self.position = position
-        self.briefdesc = briefdesc
-        self.longdesc = longdesc
+        self.brief_description = brief_description
+        self.long_description = long_description
         self.commands = commands
         self.items = items
         self.times_visited = 0
 
-
-        pass
 
 
 
     def get_brief_description (self):
         '''Return str brief description of location.'''
 
-        return briefdesc
+        return self.brief_description
 
-        pass
+
 
     def get_full_description (self):
         '''Return str long description of location.'''
 
-        return longdesc
+        return self.longdesc
 
 
-        pass
+
 
     def available_actions(self):
         '''
@@ -56,7 +58,10 @@ class Location:
         Return list of the available actions in this location.
         The list of actions should depend on the items available in the location
         and the x,y position of this location on the world map.'''
-        pass
+
+        return self.commands
+
+
 
 class Item:
 
@@ -81,23 +86,26 @@ class Item:
 
     def get_starting_location (self):
         '''Return int location where item is first found.'''
-
+        return self.start
 
         pass
 
     def get_name(self):
         '''Return the str name of the item.'''
 
+        return self.name
+
+
         pass
 
     def get_target_location (self):
         '''Return item's int target location where it should be deposited.'''
-
+        return self.target
         pass
 
     def get_target_points (self):
         '''Return int points awarded for depositing the item in its target location.'''
-
+        return self.target_points
         pass
 
 class World:
@@ -117,6 +125,7 @@ class World:
         :param itemdata: name of text file containing item data (format left up to you)
         :return:
         '''
+
         self.map = self.load_map(mapdata) # The map MUST be stored in a nested list as described in the docstring for load_map() below
         # self.locations ... You may choose how to store location and item data.
         self.load_locations(locdata) # This data must be stored somewhere. Up to you how you choose to do it...
@@ -174,6 +183,62 @@ class World:
             if  "Location:" in line:
                 index_of_location = int(line.split(" ")[1].rstrip("\n"))
 
+            if "points:" in line:
+                points = int(line.split(" ")[1].rstrip("\n"))
+
+            if "brief description:" in line :
+
+                briefdesc = line.strip("brief description:")
+
+
+            if "long description:" in line:
+                longdesc = line.strip("long description:").rstrip("\n")
+
+
+            if "list of commands:" in line :
+                commands = line.strip("list of commands:").rstrip("\n")
+                commands = commands.split(",")
+                print(commands)
+
+
+
+            location = Location(index_of_location,briefdesc,longdesc,points, commands,items,times_visted)
+
+            return_location [index_of_location] = location
+
+            return return_location
+
+
+
+
+
+
+    def load_items(self, filename):
+        '''
+        Store all items from filename (items.txt) into ... whatever you think is best.
+        Make sure the Item class is used to represent each item.
+        Change this docstring accordingly.
+        :param filename:
+        :return:
+        '''
+
+        file = open(filename, 'r')
+        return_items = {}
+        for line in file:
+
+            index_of_items =""
+            points = ""
+            briefdesc = ""
+            longdesc = ""
+            commands = []
+
+
+
+            times_visted = 0
+
+            if  "Location:" in line:
+                index_of_item = int(line.split(" ")[1].rstrip("\n"))
+
             if "Points:" in line:
                 points = int(line.split(" ")[1].rstrip("\n"))
 
@@ -193,35 +258,11 @@ class World:
 
 
 
-            location = Location(index_of_location,briefdesc,longdesc,commands,items,times_visted)
+            items = items(index_of_items,briefdesc,longdesc,points,commands,times_visted)
 
-            return_location [index_of_location] = location
+            return_items [index_of_items] = items
 
-            return return_location
-
-        pass
-
-    def load_items(self, filename):
-        '''
-        Store all items from filename (items.txt) into ... whatever you think is best.
-        Make sure the Item class is used to represent each item.
-        Change this docstring accordingly.
-        :param filename:
-        :return:
-        '''
-        file = open(filename, 'r')
-        L = []
-        for items in filename:
-            if items in locations:
-                if items
-
-
-
-
-
-
-
-
+            return return_items
 
         pass
 
@@ -233,10 +274,12 @@ class World:
         :param y: integer y representing y-coordinate of world map
         :return: Return Location object associated with this location if it does. Else, return None.
         '''
-        if location
 
-
-
+        for cordinates in Location:
+            if y == y and x == x :
+                return Location
+            else:
+                return None
 
 
         #http://inventwithpython.com/blog/2014/12/11/making-a-text-adventure-game-with-the-cmd-and-textwrap-python-modules/
@@ -249,5 +292,9 @@ class World:
 
 
         pass
+
 x = World("map.txt","locations.txt","items.txt")
+print(x.load_map("map.txt"))
 print(x.load_locations("locations.txt"))
+print(x.get_location("locations.txt"))
+print(x.load_items("items.txt"))
