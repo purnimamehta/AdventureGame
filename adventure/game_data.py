@@ -177,8 +177,7 @@ class World:
         '''
 
         self.map = self.load_map(mapdata) # The map MUST be stored in a nested list as described in the docstring for load_map() below
-        # self.locations ... You may choose how to store location and item data.
-        self.load_locations(locdata) # This data must be stored somewhere. Up to you how you choose to do it...
+        self.locations = self.load_locations(locdata) #You may choose how to store location and item data.
         self.load_items(itemdata) # This data must be stored somewhere. Up to you how you choose to do it...
 
     def load_map(self, filename):
@@ -271,7 +270,7 @@ class World:
             location = Location(index_of_location, briefdesc, longdesc, points, commands, items)
             print(str(location))
             return_location[index_of_location] = location
-
+        return location
 
 
     def load_items(self, filename):
@@ -302,6 +301,8 @@ class World:
             lolol = line.split(" ")
             return_items.append(lolol)
         file.close()
+
+        return return_items
 
 
     def get_location(self, x, y):
