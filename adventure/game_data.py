@@ -182,7 +182,7 @@ class World:
         self.load_items(itemdata) # This data must be stored somewhere. Up to you how you choose to do it...
 
     def load_map(self, filename):
-         '''
+        '''
         THIS FUNCTION MUST NOT BE RENAMED OR REMOVED.
         Store map from filename (map.txt) in the variable "self.map" as a nested list of strings OR integers like so:
             1 2 5
@@ -197,13 +197,11 @@ class World:
         -1  5   6
         '''
 
-        #http://letstalkdata.com/2014/08/how-to-write-a-text-adventure-in-python-part-4-the-game-loop/
-
-        file = open(filename, "r")
+        file = open(filename)
         l = []
         for line in file:
             line = line.strip()
-            line = line.split(' ')
+            line = line.split()
             line = map(int,line)
             l.append(line)
         file.close()
@@ -235,6 +233,7 @@ class World:
         Go East
         Go West
         '''
+
         file = open(filename , 'r')
         return_location = {}
         for line in file:
@@ -269,11 +268,10 @@ class World:
                 print(commands)
             file.readline()
             file.readline()
-            location = Location(index_of_location, briefdesc, longdesc, points, commands, items, times_visted)
+            location = Location(index_of_location, briefdesc, longdesc, points, commands, items)
             print(str(location))
             return_location[index_of_location] = location
 
-            return return_location
 
 
     def load_items(self, filename):
@@ -302,12 +300,8 @@ class World:
         return_items = []
         for line in file:
             lolol = line.split(" ")
-
-           # lolol = line.split("\n")
             return_items.append(lolol)
         file.close()
-
-        return return_items
 
 
     def get_location(self, x, y):
@@ -333,6 +327,6 @@ class World:
 x = World("map.txt", "locations.txt", "items.txt")
 
 #print(x.load_map("map.txt"))
-print(x.load_locations("locations.txt"))
+#print(x.load_locations("locations.txt"))
 #print(x.get_location(3,5))
 #print(x.load_items("items.txt"))
