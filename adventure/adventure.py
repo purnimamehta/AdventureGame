@@ -5,22 +5,15 @@ if __name__ == "__main__":
     WORLD = World("map.txt", "locations.txt", "items.txt")
     PLAYER = Player(0,0) # set starting location of player; you may change the x, y coordinates here as appropriate
 
-    menu = ["look", "inventory", "score", "quit", "back"]
-    #same as command in calender
+    menu = "look", "inventory", "score", "quit", "back"
 
     while not PLAYER.victory:
         location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
 
-        # ENTER CODE HERE TO PRINT LOCATION DESCRIPTION
-        # depending on whether or not it's been visited before,
-        #   print either full description (first time visit) or brief description (every subsequent visit)
-
-
         print("What to do? \n")
-        print("[menu]")
-        for action in location.available_actions():
-            print(action)
+        print("Here are your options: ")
+        print(menu)
         choice = input("\nEnter action: ")
 
         if (choice == "[menu]"):
@@ -29,6 +22,37 @@ if __name__ == "__main__":
                 print(option)
             choice = input("\nChoose action: ")
 
+            if choice =="look":
+                Location.get_brief_description()
+            elif choice == "inventory":
+                inventory = player.get_inventory()
+            elif choice == "score":
+                print(score)
+            elif choice == "quit":
+                exit()
+            elif choice == "back":
+                print ("What do do?")
+                choice = ("Choose action: ")
+
+
+        elif choice == 'north':
+            PLAYER.move_north()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+
+        elif choice == 'south':
+            PLAYER.move_south()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+
+        elif choice == 'east':
+            PLAYER.move_east()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+
+        elif choice == 'west':
+            PLAYER.move_west()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+
+        else:
+            return
 
 
 

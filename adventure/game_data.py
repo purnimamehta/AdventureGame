@@ -179,7 +179,7 @@ class World:
         :return: the list return_location
         Example:
         '''
-        file = open(filename, 'r')
+        file = open(filename , 'r')
         return_location = {}
         for line in file:
 
@@ -193,10 +193,10 @@ class World:
             times_visted = 0
 
             if "Location:" in line:
-                index_of_location = int(line.split(" ")[1].rstrip(" "))
+                index_of_location = int(line.split(" ")[1].rstrip("\n"))
             line = file.readline()
             if "points:" in line:
-                points = int(line.split(" ")[1].rstrip(" "))
+                points = int(line.split(" ")[1].rstrip("\n"))
             line = file.readline()
 
             if "brief description:" in line:
@@ -204,11 +204,11 @@ class World:
             line = file.readline()
 
             if "long description:" in line:
-                longdesc = line.strip("long description:").rstrip(" ")
+                longdesc = line.strip("long description:").rstrip("\n")
             line = file.readline()
 
             if "list of commands:" in line:
-                commands = line.strip("list of commands:").rstrip(" ")
+                commands = line.strip("list of commands:").rstrip("\n")
                 commands = commands.split(",")
                 print(commands)
             file.readline()
@@ -233,6 +233,8 @@ class World:
         return_items = []
         for line in file:
             lolol = line.split(" ")
+
+           # lolol = line.split("\n")
             return_items.append(lolol)
         file.close()
 
@@ -256,7 +258,8 @@ class World:
 
 
 x = World("map.txt", "locations.txt", "items.txt")
-print(x.load_map("map.txt"))
-print(x.load_locations("locations.txt"))
-print(x.get_location(3,5))
-print(x.load_items("items.txt"))
+
+#print(x.load_map("map.txt"))
+#print(x.load_locations("locations.txt"))
+#print(x.get_location(3,5))
+#print(x.load_items("items.txt"))

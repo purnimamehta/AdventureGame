@@ -88,55 +88,55 @@ END
 LOCATION 14 - Starbucks
 0
 brief description: This is Starbucks. It has syrupy drinks served in red cups. Let's get out of here!
-long description: This is Starbucks.
+long description: This is Starbucks, look at that view! Seems like an amazing place to do homework at. Maybe next time you can come here.
 END
 
-LOCATION 15 - path
+LOCATION 15 -  long path
 0
-brief description:
-long description:
+brief description: This is a long path.
+long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 16 - path
 0
-brief description:
-long description:
+brief description: This is a long path.
+long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 17 - path
 0
-brief description:
-long description:
+brief description: This is a long path.
+long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 18 - path
 0
-brief description:
-long description:
+brief description: This is a long path.
+long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 19 - path
 0
-brief description:
-long description:
+brief description: This is a long path.
+long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 20 - path
 0
-brief description:
-long description:
+brief description: There is another path leading to some buildings on your east. Let's check it out?
+long description: This is a long path. There seems to be another path on the east, we should check it out!
 END
 
 LOCATION 21 - path
 0
-brief description:
-long description:
+brief description: This is a long path.
+long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 22 - path
 0
-brief description:
-long description:
+brief description: This is a long path.
+long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 23 - study room
@@ -146,22 +146,22 @@ long description: You are in an empty study room. And by empty, we mean, absolut
 the whiteboards taken off the wall, not even the carpeting is left. Are they planning to do something else with this space?
 END
 
-LOCATION 24 - path
+LOCATION 24 - small hallway
 0
-brief description:
-long description:
+brief description: This is a small hallway. There is the fourth floor of the library to the North and a study room to the south.
+long description: This is a small hallway. It's empty and there isn't much too look at other than the shabby walls. There is a library up ahead.
 END
 
-LOCATION 25 - path
+LOCATION 25 - small hallway
 0
-brief description:
-long description:
+brief description: This is also a small hallway. There is the fourth floor of the library to the North.
+long description: This is also a small hallway. It's empty and there isn't much too look at other than the shabby walls. There is a library up ahead.
 END
 
-LOCATION 26 - path
+LOCATION 26 - library
 0
-brief description:
-long description:
+brief description: This is the library. Maybe you left something here?
+long description: You're in the library. It's really quiet in here and since you were working in at quiet study maybe you should check around here to see if you can find anything.
 END
 
 LOCATION 27 - wilderness trail
