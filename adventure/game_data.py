@@ -136,7 +136,7 @@ class World:
 
         self.map = self.load_map(mapdata) # The map MUST be stored in a nested list as described in the docstring for load_map() below
         # self.locations ... You may choose how to store location and item data.
-        self.load_locations(locdata) # This data must be stored somewhere. Up to you how you choose to do it...
+        self.locations=self.load_locations(locdata) # This data must be stored somewhere. Up to you how you choose to do it...
         self.load_items(itemdata) # This data must be stored somewhere. Up to you how you choose to do it...
 
     def load_map(self, filename):
@@ -179,7 +179,7 @@ class World:
         :return: the list return_location
         Example:
         '''
-        file = open(filename , 'r')
+        file = open(filename, 'r')
         return_location = {}
         for line in file:
 
@@ -193,10 +193,10 @@ class World:
             times_visted = 0
 
             if "Location:" in line:
-                index_of_location = int(line.split(" ")[1].rstrip("\n"))
+                index_of_location = int(line.split(" ")[1].rstrip(" "))
             line = file.readline()
             if "points:" in line:
-                points = int(line.split(" ")[1].rstrip("\n"))
+                points = int(line.split(" ")[1].rstrip(" "))
             line = file.readline()
 
             if "brief description:" in line:
@@ -204,11 +204,11 @@ class World:
             line = file.readline()
 
             if "long description:" in line:
-                longdesc = line.strip("long description:").rstrip("\n")
+                longdesc = line.strip("long description:").rstrip(" ")
             line = file.readline()
 
             if "list of commands:" in line:
-                commands = line.strip("list of commands:").rstrip("\n")
+                commands = line.strip("list of commands:").rstrip(" ")
                 commands = commands.split(",")
                 print(commands)
             file.readline()
@@ -248,20 +248,15 @@ class World:
         :return: Return Location object associated with this location if it does. Else, return None.
         '''
 
-        for coordinates in self.locations:
+        for i in self.locations:
             if y > 0 and x > 0:
                 return Location
             else:
                 return None
 
-        #http://inventwithpython.com/blog/2014/12/11/making-a-text-adventure-game-with-the-cmd-and-textwrap-python-modules/
-        #https://github.com/soapy1/TextAdventure/blob/master/textAdventure.py
-        #https://www.youtube.com/watch?v=8CDePunJlck
 
-
-
-x = World("map.txt","locations.txt","items.txt")
+x = World("map.txt", "locations.txt", "items.txt")
 print(x.load_map("map.txt"))
 print(x.load_locations("locations.txt"))
-#print(x.get_location("locations.txt"))
+print(x.get_location(3,5))
 print(x.load_items("items.txt"))

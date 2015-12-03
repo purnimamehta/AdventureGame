@@ -88,7 +88,7 @@ END
 LOCATION 14 - Starbucks
 0
 brief description: This is Starbucks. It has syrupy drinks served in red cups. Let's get out of here!
-long description:
+long description: This is Starbucks.
 END
 
 LOCATION 15 - path
