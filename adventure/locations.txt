@@ -220,41 +220,41 @@ long description: This is the CCIT building. Maybe you will find something in he
 END
 
 
-LOCATION 35 - path
+LOCATION 35 - Stairs
 0
-brief description:
-long description:
+brief description: You're on the stairs. Go north then east.
+long description: You're on the stairs leading to the fourth floor of the library.
 END
 
 
 LOCATION 36 - path
 0
-brief description:
-long description:
+brief description: You're on the stairs. Go east then north.
+long description: You're on the stairs leading to the fourth floor of the library.
 END
 
 LOCATION 37 - library 3rd floor
 0
-brief description: You are on the third floor. There is a study room to the South.
-long description: You are on the third floor and its a complete mess. Looks like someone threw a surprise birthday party and left everything there for the janitors to clean up.
-Maybe your cheat sheet is on the floor somewhere? But no one is around to help you clean it, what will you do?
+brief description: You're on the stairs. Go north then east.
+long description: You're on the stairs leading to the fourth floor of the library.
 END
 
 LOCATION 38 - path
 0
-brief description:
-long description:
+brief description: You're on the stairs. Go east to reach the fourth floor.
+long description: You're on the stairs leading to the fourth floor of the library.
 END
 
-LOCATION 39 - path
+LOCATION 39 - 4th floor library
 0
-brief description:
-long description:
+brief description: You in the library! Go east to explore more or west to go back to the first floor.
+long description: You are on the third floor and its a complete mess. Looks like someone threw a surprise birthday party and left everything there for the janitors to clean up.
+Maybe your cheat sheet is on the floor somewhere? But no one is around to help you clean it, what will you do?
 END
 
-LOCATION 40 - path
+LOCATION 40 - hallway
 0
-brief description:
+brief description: This is the hallway that leads to IB where your exam is being held.
 long description:
 END
 

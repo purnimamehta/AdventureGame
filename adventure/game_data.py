@@ -1,7 +1,7 @@
 class Location:
 
 
-    def __init__(self,position, brief_description,long_description,points,commands,items, times_visited):
+    def __init__(self,position, brief_description,long_description,commands,items, times_visited):
         '''Creates a new location.
         ADD NEW ATTRIBUTES TO THIS CLASS HERE TO STORE DATA FOR EACH LOCATION.
 
@@ -45,13 +45,23 @@ class Location:
 
 
     def get_brief_description (self):
-        '''Return str brief description of location.'''
+        '''Return str brief description of location.
+        :param:
+        :return: brief description
+        example:
+        brief_description: " You are in Starbucks."
+        '''
 
         return self.brief_description
 
 
     def get_full_description (self):
-        '''Return str long description of location.'''
+        '''Return str long description of location.
+        :param:
+        :return: full  description
+        example:
+        long_description: " You are in the cozy warmest place of them all at UTM. It's where everyone comes to get their warm spice lattes. You are are starbuck."
+        '''
 
         return self.long_description
 
@@ -61,12 +71,21 @@ class Location:
         -- Suggested Method (You may remove/modify/rename this as you like) --
         Return list of the available actions in this location.
         The list of actions should depend on the items available in the location
-        and the x,y position of this location on the world map.'''
+        and the x,y position of this location on the world map.
+        :param:
+        :return: commands available
+        example:
+        commands: North, South, East, West
+        '''
 
         return self.commands
 
     def __str__(self):
         return self.brief_description + " | " + self.long_description + " | " + self.position
+
+
+
+
 
 class Item:
 
@@ -86,6 +105,7 @@ class Item:
         :param: start: where the item is first located
         :param: target: where the item should go ( target location)
         :param: target_points: how many points does the item count for
+
         Example
         name: "gum"
         start: "library fourth floor"
@@ -99,20 +119,42 @@ class Item:
         self.target_points = target_points
 
     def get_starting_location (self):
-        '''Return int location where item is first found.'''
+        '''Return int location where item is first found.
+        :param:
+        :return: the integer location where the item is first located at
+        example: Item is found in library at (0,1)
+                 return Item in library at (0,1)
+        '''
         return self.start
 
     def get_name(self):
-        '''Return the str name of the item.'''
+        '''Return the str name of the item.
+        :param
+        :return: the name of the item
+        example: item name: GUM
+        '''
 
         return self.name
 
     def get_target_location (self):
-        '''Return item's int target location where it should be deposited.'''
+        '''Return item's int target location where it should be deposited.
+        :param:
+        :return: items destination coordinates
+        example: gum is suppose to go into the trashcan
+                trashcan coordinates are (2,3)
+                gum must reach coordinates (2,3)
+        '''
         return self.target
 
     def get_target_points (self):
-        '''Return int points awarded for depositing the item in its target location.'''
+        '''Return int points awarded for depositing the item in its target location.
+        :param:
+        :return: the points for putting the item into its proper location
+        example:
+        Gum is suppose to go into trashcan
+        Gum is in trashcan
+        points earned: 3
+        '''
         return self.target_points
 
 
@@ -136,11 +178,11 @@ class World:
 
         self.map = self.load_map(mapdata) # The map MUST be stored in a nested list as described in the docstring for load_map() below
         # self.locations ... You may choose how to store location and item data.
-        self.locations=self.load_locations(locdata) # This data must be stored somewhere. Up to you how you choose to do it...
+        self.load_locations(locdata) # This data must be stored somewhere. Up to you how you choose to do it...
         self.load_items(itemdata) # This data must be stored somewhere. Up to you how you choose to do it...
 
     def load_map(self, filename):
-        '''
+         '''
         THIS FUNCTION MUST NOT BE RENAMED OR REMOVED.
         Store map from filename (map.txt) in the variable "self.map" as a nested list of strings OR integers like so:
             1 2 5
@@ -165,6 +207,7 @@ class World:
             line = map(int,line)
             l.append(line)
         file.close()
+
         return l
 
 
@@ -177,7 +220,20 @@ class World:
         Change this docstring as needed.
         :param filename:
         :return: the list return_location
+
         Example:
+        LOCATION 1
+        Points = 1
+
+        You are on the first floor of the UTM Library. There is an empty study room to the South, an exit from the library to the North.
+        You are on the first floor of the UTM Library. It's usually crowded at this time of the day, but today it's eerily quiet.
+        Only a few students are studying inside one of the study rooms. You better not disturb them. A librarian stands near the
+        service desk, looking bored and sleepy. There is an empty study room to the South, an exit from the library to the North.
+
+        Go North
+        Go south
+        Go East
+        Go West
         '''
         file = open(filename , 'r')
         return_location = {}
@@ -227,6 +283,19 @@ class World:
         Change this docstring accordingly.
         :param filename:
         :return: the list return_items
+
+        Example:
+        Item: Gum
+        Location: Library
+        Points: 2
+
+        Brief_description: You have gum.
+
+        long_description: You have the 5 flavor, ever lasting blueberry gum. It is a 6 pack. Black packaging.
+
+        list of commands: Eat the gum
+                          leave the gum
+                          hit the gum
         '''
 
         file = open(filename, 'r')
@@ -248,6 +317,10 @@ class World:
         :param x: integer x representing x-coordinate of world map
         :param y: integer y representing y-coordinate of world map
         :return: Return Location object associated with this location if it does. Else, return None.
+
+        Example: x = 3 , y = 4
+
+        player location will move ( 3, 4)
         '''
 
         for i in self.locations:
@@ -260,6 +333,6 @@ class World:
 x = World("map.txt", "locations.txt", "items.txt")
 
 #print(x.load_map("map.txt"))
-#print(x.load_locations("locations.txt"))
+print(x.load_locations("locations.txt"))
 #print(x.get_location(3,5))
 #print(x.load_items("items.txt"))

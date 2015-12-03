@@ -6,6 +6,9 @@ class Player:
         :param x: x-coordinate of position on map
         :param y: y-coordinate of position on map
         :return:
+        Example:
+        x: 2
+        y: 3
         This is a suggested starter class for Player.
         You may add new parameters / attributes / methods to this class as you see fit.
         Consider every method in this Player class as a "suggested method":
@@ -15,6 +18,9 @@ class Player:
         self.y = y
         self.inventory = []
         self.victory = False
+        self.points = 0
+
+
 
     def move(self, dx, dy):
         '''
@@ -22,6 +28,9 @@ class Player:
         :param dx: x coordinate
         :param dy: y corrdinate
         :return:
+        example:
+        dx : 4
+        dy : 3
         '''
         self.x += dx
         self.y += dy
@@ -30,26 +39,63 @@ class Player:
 
     def move_north(self):
         '''These integer directions are based on how the map must be stored
-        in our nested list World.map'''
+        in our nested list World.map
+        :param: Player moves north
+        :return: player coordinates
+        example:
+        player moves North, x = 0 , y = 1
+        coordinates ( 0,1 )
+        '''
+
         """Go to the 4th floor of the library, if possible."""
 
-        self.move(0,0)
+        self.move(0,1)
 
 
     def move_south(self):
+        '''
+        :param: Player moves south
+        :return: player coordinates
+        example:
+        player moves south, x = 0 , y = 1
+        coordinates ( 0,1 )
+        '''
         self.move(0,1)
 
     def move_east(self):
+        '''
+        :param: Player moves east
+        :return: player coordinates
+        example:
+        player moves east x = 1, y = 0
+        coordinates (1, 0)
+        '''
         self.move(1,0)
 
     def move_west(self):
+        '''
+        :param: Player moves west
+        :return: player coordinates
+        example:
+        player moves west x = -1, y = 0
+        coordinates (-1, 0)
+        '''
         self.move(-1,0)
 
     def add_item(self, item):
         '''
         Add item to inventory.
-        :param item:
+        :param:item
         :return: True if item is added into inventory
+        example:
+        Inventory:  cookie
+                    pencil
+                    eraser
+        add: gum
+        Inventory: cookie
+                   pencil
+                   eraser
+                   gum
         '''
 
         if item not in self.inventory:
@@ -61,6 +107,13 @@ class Player:
         Remove item from inventory.
         :param item:
         :return: True if item is removed from inventory
+        Example:
+        Inventory: gum
+                    pencil
+                    eraser
+        remove: gum
+        Inventory: pencil
+                   eraser
         '''
         if item in self.inventory:
             self.inventory.remove(item)
@@ -70,9 +123,12 @@ class Player:
     def get_inventory(self):
         '''
         Return inventory.
-        :return: inventory
+        :return: every item that is located in invetory
+        Example:
+        Inventory: cookie
+                    gum
+                    pencil
+                    eraser
         '''
 
         return self.inventory
-
-#http://codereview.stackexchange.com/questions/37677/a-small-python-text-adventure-frame

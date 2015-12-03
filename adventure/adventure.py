@@ -1,5 +1,13 @@
 from game_data import World, Item, Location
 from player import Player
+import winsound
+
+# when player wins the game
+import winsound
+
+freq = 2500
+duration = 1000
+winsound.Beep(freq, duration)
 
 if __name__ == "__main__":
     WORLD = World("map.txt", "locations.txt", "items.txt")
@@ -50,9 +58,6 @@ if __name__ == "__main__":
         elif choice == 'west':
             PLAYER.move_west()
             location = WORLD.get_location(PLAYER.x, PLAYER.y)
-
-        else:
-            return
 
 
 
