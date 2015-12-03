@@ -1,11 +1,11 @@
 LOCATION -1
-0
+points -1
 That way is blocked.
 That way is blocked.
 END
 
 LOCATION 01 - Library
-0
+points 1
 brief description: You are on the second floor of the UTM Library. There is a washroom to the South and stairs leading to the third floor to the East.
 long description: You are on the second floor of the UTM Library. It's usually crowded at this time of the day, but today it's eerily quiet.
 Only a few students are studying inside one of the study rooms. You better not disturb them. A librarian stands near the
@@ -14,172 +14,172 @@ END
 
 
 LOCATION 02 - Library
-0
+points 1
 brief description: You're in the library.
 long description: You're in the library. Not a lot to see here, you can go south to the bathroom.
 END
 
 LOCATION 03 - Hallway
-0
+points 2
 brief description: You're in a hallway. Go north to the library or south into the bathroom.
 long description: You're in a hallway. There is a painting on the wall but no safe behind it. Keep moving north to the library or south to the bathroom.
 END
 
 LOCATION 04 - Bathroom
-0
+points 1
 brief description: You are in the bathroom outside the UTM Library. Take a path south into the unknown or north into the known.
 long description: Oh no! Someone decided it would be funny to toilet paper the entire bathroom. Did you leave your T-Card in here? How will you find out?
 END
 
 LOCATION 05 - sidewalk
-0
+points 0
 brief description: You're on a sidewalk.
 long description: You're on a sidewalk, nothing to see here.
 END
 
 LOCATION 06 - sidewalk
-0
+points 0
 brief description: You're on a sidewalk.
 long description: You're on a sidewalk, nothing to see here.
 END
 
 LOCATION 07 - sidewalk
-0
+points 0
 brief description: You're on a sidewalk.
 long description: You're on a sidewalk, nothing to see here.
 END
 
 LOCATION 08 - sidewalk
-0
+points 0
 brief description: You're on a sidewalk.
 long description: You're on a sidewalk, nothing to see here.
 END
 
 LOCATION 09 - sidewalk
-0
+points 0
 brief description: You're on a sidewalk.
 long description: You're on a sidewalk, nothing to see here.
 END
 
 LOCATION 10 - sidewalk
-0
+points 0
 brief description: You're on a sidewalk.
 long description: You're on a sidewalk, nothing to see here.
 END
 
 LOCATION 11 - Catwalk
-0
+points 0
 brief description: You inside a catwalk.
 long description: You're inside a catwalk. Are there supposed to be cats here? Why is it called the catwalk anyway?
 END
 
 LOCATION 12 - Catwalk
-0
+points 0
 brief description: You inside a catwalk.
 long description: You're inside a catwalk. Are there supposed to be cats here? Why is it called the catwalk anyway?
 END
 
 LOCATION 13 - Catwalk
-0
+points 0
 brief description: You inside a catwalk.
 long description: You're inside a catwalk. Are there supposed to be cats here? Why is it called the catwalk anyway?
 END
 
 LOCATION 14 - Starbucks
-0
+points 0
 brief description: This is Starbucks. It has syrupy drinks served in red cups. Let's get out of here!
 long description: This is Starbucks, look at that view! Seems like an amazing place to do homework at. Maybe next time you can come here.
 END
 
 LOCATION 15 -  long path
-0
+points 0
 brief description: This is a long path.
 long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 16 - path
-0
+points 0
 brief description: This is a long path.
 long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 17 - path
-0
+points 0
 brief description: This is a long path.
 long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 18 - path
-0
+points 0
 brief description: This is a long path.
 long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 19 - path
-0
+points 0
 brief description: This is a long path.
 long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 20 - path
-0
+points 0
 brief description: There is another path leading to some buildings on your east. Let's check it out?
 long description: This is a long path. There seems to be another path on the east, we should check it out!
 END
 
 LOCATION 21 - path
-0
+points 0
 brief description: This is a long path.
 long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 22 - path
-0
+points 0
 brief description: This is a long path.
 long description: This is a long path... is it ever going to end?
 END
 
 LOCATION 23 - study room
-0
+points -1
 brief description: This study room is completely empty. There is a long path leading to Starbucks on the South.
 long description: You are in an empty study room. And by empty, we mean, absolutely empty. All the tables and chairs have been taken out,
 the whiteboards taken off the wall, not even the carpeting is left. Are they planning to do something else with this space?
 END
 
 LOCATION 24 - small hallway
-0
+points 0
 brief description: This is a small hallway. There is the fourth floor of the library to the North and a study room to the south.
 long description: This is a small hallway. It's empty and there isn't much too look at other than the shabby walls. There is a library up ahead.
 END
 
 LOCATION 25 - small hallway
-0
+points 0
 brief description: This is also a small hallway. There is the fourth floor of the library to the North.
 long description: This is also a small hallway. It's empty and there isn't much too look at other than the shabby walls. There is a library up ahead.
 END
 
 LOCATION 26 - library
-0
+points 1
 brief description: This is the library. Maybe you left something here?
 long description: You're in the library. It's really quiet in here and since you were working in at quiet study maybe you should check around here to see if you can find anything.
 END
 
 LOCATION 27 - wilderness trail
-0
+points 0
 brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
 long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
 Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
 END
 
 LOCATION 28 - wilderness trail
-0
+points 0
 brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
 long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
 Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
 END
 
 LOCATION 29 - wilderness trail
-0
+points 0
 brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
 long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
 Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
@@ -187,87 +187,87 @@ END
 
 
 LOCATION 30 - wilderness trail
-0
+points 0
 brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
 long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
 Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
 END
 
 LOCATION 31 - wilderness trail
-0
+points 0
 brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
 long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
 Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
 END
 
 LOCATION 32 - wilderness trail
-0
+points 0
 brief description: This is the wilderness trail. Be careful! There are lots of geese, fat squirrels and deers walking around.
 long description: You are in the wilderness trail. It seems like a sketchy path with many trees and spiders crawling everywhere.
 Did I mention that there are lots of geese, fat squirrels and deers walking around? Watch your step!
 END
 
 LOCATION 33 - deerfield hall
-0
+points -1
 brief description: You're in Deerfield Hall. Nothing to see here. Go south to go back to the Wilderness Trail.
 long description: This is Deerfield Hall, nothing much to see. It has great food if you're hungry but you're going to be late for the exam!
 END
 
 LOCATION 34 - ccit building
-0
+points 1
 brief description: This is the CCIT building. It's so beautiful, you stop to admire it and take some pictures.
 long description: This is the CCIT building. Maybe you will find something in here? You can always exit onto the Wilderness Trail by going South.
 END
 
 
 LOCATION 35 - Stairs
-0
+points 0
 brief description: You're on the stairs. Go north then east.
 long description: You're on the stairs leading to the fourth floor of the library.
 END
 
 
 LOCATION 36 - path
-0
+points 0
 brief description: You're on the stairs. Go east then north.
 long description: You're on the stairs leading to the fourth floor of the library.
 END
 
 LOCATION 37 - library 3rd floor
-0
+points 1
 brief description: You're on the stairs. Go north then east.
 long description: You're on the stairs leading to the fourth floor of the library.
 END
 
 LOCATION 38 - path
-0
+points 0
 brief description: You're on the stairs. Go east to reach the fourth floor.
 long description: You're on the stairs leading to the fourth floor of the library.
 END
 
 LOCATION 39 - 4th floor library
-0
+points -1
 brief description: You in the library! Go east to explore more or west to go back to the first floor.
 long description: You are on the third floor and its a complete mess. Looks like someone threw a surprise birthday party and left everything there for the janitors to clean up.
 Maybe your cheat sheet is on the floor somewhere? But no one is around to help you clean it, what will you do?
 END
 
 LOCATION 40 - hallway
-0
+points 0
 brief description: This is the hallway that leads to IB where your exam is being held.
 long description:
 END
 
 
 LOCATION 41 - path
-0
+points 0
 brief description:
 long description:
 END
 
 
 LOCATION 42 - path
-0
+points 0
 brief description:
 long description:
 END
@@ -281,14 +281,14 @@ END
 
 
 LOCATION 44 - path
-0
+points 0
 brief description:
 long description:
 END
 
 
 LOCATION 45 - IB
-0
+points 5
 brief description: This is IB.
 long description:
 END

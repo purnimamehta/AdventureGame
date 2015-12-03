@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71fbb27f-b4f8-40b3-9ccd-15399d290c42" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/adventure.py" afterPath="$PROJECT_DIR$/adventure/adventure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/game_data.py" afterPath="$PROJECT_DIR$/adventure/game_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure/locations.txt" afterPath="$PROJECT_DIR$/adventure/locations.txt" />
     </list>
     <ignored path="AdventureGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game_data.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adventure/game_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67421603">
-              <caret line="280" column="24" selection-start-line="280" selection-start-column="24" selection-end-line="280" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="297" column="28" selection-start-line="297" selection-start-column="28" selection-end-line="297" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -86,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="locations.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="locations.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure/locations.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="257" column="17" selection-start-line="257" selection-start-column="17" selection-end-line="257" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.73867595">
+              <caret line="289" column="16" selection-start-line="289" selection-start-column="16" selection-end-line="289" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -118,10 +117,10 @@
         <option value="$PROJECT_DIR$/adventure/ASCII Map.txt" />
         <option value="$PROJECT_DIR$/adventure/map.txt" />
         <option value="$PROJECT_DIR$/adventure/items.txt" />
-        <option value="$PROJECT_DIR$/adventure/locations.txt" />
         <option value="$PROJECT_DIR$/adventure/player.py" />
         <option value="$PROJECT_DIR$/adventure/adventure.py" />
         <option value="$PROJECT_DIR$/adventure/game_data.py" />
+        <option value="$PROJECT_DIR$/adventure/locations.txt" />
       </list>
     </option>
   </component>
@@ -361,7 +360,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -548,18 +547,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adventure/locations.txt">
+    <entry file="file://$PROJECT_DIR$/adventure/game_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="257" column="17" selection-start-line="257" selection-start-column="17" selection-end-line="257" selection-end-column="17" />
+          <caret line="297" column="28" selection-start-line="297" selection-start-column="28" selection-end-line="297" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adventure/game_data.py">
+    <entry file="file://$PROJECT_DIR$/adventure/locations.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67421603">
-          <caret line="280" column="24" selection-start-line="280" selection-start-column="24" selection-end-line="280" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.73867595">
+          <caret line="289" column="16" selection-start-line="289" selection-start-column="16" selection-end-line="289" selection-end-column="16" />
           <folding />
         </state>
       </provider>
