@@ -18,6 +18,10 @@ if __name__ == "__main__":
     while not PLAYER.victory:
         location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
+        #put in locations, everytime the reach closer to the destination they will earn two points
+        #when they reach farther from the location they will lose 1 point
+        PLAYER.points+= 2
+        PLAYER.points-= 1
 
         print("What to do? \n")
         print("Here are your options: ")
@@ -60,6 +64,8 @@ if __name__ == "__main__":
             location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
 
+    def score(score):
+            print("Score:" +str(score)
 
         # CALL A FUNCTION HERE TO HANDLE WHAT HAPPENS UPON USER'S CHOICE
         #    REMEMBER: the location = w.get_location(p.x, p.y) at the top of this loop will update the location if the
