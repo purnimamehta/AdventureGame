@@ -25,52 +25,69 @@ brief description: You're in a hallway. Go north to the library or south into th
 long description: You're in a hallway. There is a painting on the wall but no safe behind it. Keep moving north to the library or south to the bathroom.
 END
 
-LOCATION 04 - bathroom
+LOCATION 04 - Bathroom
 0
 brief description: You are in the bathroom outside the UTM Library. Take a path south into the unknown or north into the known.
 long description: Oh no! Someone decided it would be funny to toilet paper the entire bathroom. Did you leave your T-Card in here? How will you find out?
 END
 
-
-LOCATION 08 - long path
+LOCATION 05 - sidewalk
 0
-brief description:
-long description:
+brief description: You're on a sidewalk.
+long description: You're on a sidewalk, nothing to see here.
 END
 
-LOCATION 09 - starbucks
+LOCATION 06 - sidewalk
 0
-brief description:
-long description:
+brief description: You're on a sidewalk.
+long description: You're on a sidewalk, nothing to see here.
 END
 
-LOCATION 10 - hallway
+LOCATION 07 - sidewalk
 0
-brief description:
-long description:
+brief description: You're on a sidewalk.
+long description: You're on a sidewalk, nothing to see here.
 END
 
-LOCATION 11 - IB
+LOCATION 08 - sidewalk
 0
-brief description:
-long description:
+brief description: You're on a sidewalk.
+long description: You're on a sidewalk, nothing to see here.
 END
 
-LOCATION 12 - catwalk
+LOCATION 09 - sidewalk
 0
-brief description:
-long description:
+brief description: You're on a sidewalk.
+long description: You're on a sidewalk, nothing to see here.
 END
 
-LOCATION 13 - path
+LOCATION 10 - sidewalk
 0
-brief description:
-long description:
+brief description: You're on a sidewalk.
+long description: You're on a sidewalk, nothing to see here.
 END
 
-LOCATION 14 - path
+LOCATION 11 - Catwalk
 0
-brief description:
+brief description: You inside a catwalk.
+long description: You're inside a catwalk. Are there supposed to be cats here? Why is it called the catwalk anyway?
+END
+
+LOCATION 12 - Catwalk
+0
+brief description: You inside a catwalk.
+long description: You're inside a catwalk. Are there supposed to be cats here? Why is it called the catwalk anyway?
+END
+
+LOCATION 13 - Catwalk
+0
+brief description: You inside a catwalk.
+long description: You're inside a catwalk. Are there supposed to be cats here? Why is it called the catwalk anyway?
+END
+
+LOCATION 14 - Starbucks
+0
+brief description: This is Starbucks. It has syrupy drinks served in red cups. Let's get out of here!
 long description:
 END
 
@@ -196,10 +213,10 @@ brief description: You're in Deerfield Hall. Nothing to see here. Go south to go
 long description: This is Deerfield Hall, nothing much to see. It has great food if you're hungry but you're going to be late for the exam!
 END
 
-LOCATION 07 - ccit building
+LOCATION 34 - ccit building
 0
 brief description: This is the CCIT building. It's so beautiful, you stop to admire it and take some pictures.
-long description: This is the CCIT building. N
+long description: This is the CCIT building. Maybe you will find something in here? You can always exit onto the Wilderness Trail by going South.
 END
 
 

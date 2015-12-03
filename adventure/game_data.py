@@ -248,12 +248,11 @@ class World:
         :return: Return Location object associated with this location if it does. Else, return None.
         '''
 
-        for coordinates in Location:
-            if y == y and x == x:
+        for coordinates in self.locations:
+            if y > 0 and x > 0:
                 return Location
             else:
                 return None
-
 
         #http://inventwithpython.com/blog/2014/12/11/making-a-text-adventure-game-with-the-cmd-and-textwrap-python-modules/
         #https://github.com/soapy1/TextAdventure/blob/master/textAdventure.py
@@ -264,5 +263,5 @@ class World:
 x = World("map.txt","locations.txt","items.txt")
 print(x.load_map("map.txt"))
 print(x.load_locations("locations.txt"))
-print(x.get_location("locations.txt"))
+#print(x.get_location("locations.txt"))
 print(x.load_items("items.txt"))
