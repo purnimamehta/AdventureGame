@@ -301,11 +301,3 @@ class World:
                 return Location
             else:
                 return None
-
-
-x = World("map.txt", "locations.txt", "items.txt")
-
-#print(x.load_map("map.txt"))
-#print(x.load_locations("locations.txt"))
-#print(x.get_location(3,5))
-#print(x.load_items("items.txt"))
