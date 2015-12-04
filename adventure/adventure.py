@@ -1,11 +1,11 @@
 from game_data import World, Item, Location
 from player import Player
-#import winsound
+import winsound
 
 
-#freq = 2500
-#duration = 1000
-#winsound.Beep(freq, duration)
+freq = 2500
+duration = 1000
+winsound.Beep(freq, duration)
 
 if __name__ == "__main__":
     WORLD = World("map.txt", "locations.txt", "items.txt")
@@ -20,6 +20,40 @@ if __name__ == "__main__":
         #when they reach farther from the location they will lose 1 point
         #PLAYER.points+= 2
         #PLAYER.points-= 1
+
+        print("Here is a map of Univeristy of Toronto")
+        print("                       ________________")
+        print("                       |    library   |")
+        print("                       |   3th floor  |")
+        print("                    == |              |")
+        print("---------------   ==   ------|   |-----")
+        print("|   library   | ==           |   |")
+        print("|   2nd floor |         _____|   |____")
+        print("|             |        | study room   |")
+        print("|_    ________|        |____      ____|")
+        print("  |  |                      |    |                    ________________            _____________")
+        print("--|  |-------               |    |                   |               |           |            |")
+        print("|           |               |    |                   |               |           |            |")
+        print("| bathroom  |               |  l |                   |  Deerfield    |           |    CCIT    |")
+        print("|           |               |  o |                   |               |           |            |")
+        print("--|  |-------               |  n |___________________|               |___________|            |")
+        print("  |  |                      |  g                                wilderness trail              |")
+        print("  |  |                      |     ____________________________________________________________|")
+        print("  |  |                      |  p |")
+        print("  | p|                      |  a |")
+        print("  | a|                      |  t |")
+        print("  | t|                      |  h |")
+        print("  | h|                      |    |")
+        print("  |  |                   ___|    |___")
+        print("  |  |                  |            |")
+        print("  |  |                  |            |                                        __________")
+        print("  |  |__________________|            |/\/\/\/\/\/\/\/\/\/\/\/\/\//\/\/\/\/\/\/          |")
+        print("  |         catwalk       starbucks  ----------------------------------------           |")
+        print("  |_____________________                       hallway                            IB    |")
+        print("                        |            ----------------------------------------           |")
+        print("                        |____________/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ __________|")
+
+
 
         print("What to do? \n")
         print("Here are your options: ")
