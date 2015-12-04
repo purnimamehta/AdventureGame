@@ -9,19 +9,28 @@ winsound.Beep(freq, duration)
 
 if __name__ == "__main__":
     WORLD = World("map.txt", "locations.txt", "items.txt")
-    PLAYER = Player(0,0) # set starting location of player; you may change the x, y coordinates here as appropriate
+    PLAYER = Player(2,4) # set starting location of player; you may change the x, y coordinates here as appropriate
 
-    menu = "look", "inventory", "score", "quit", "back"
+    menu = ["look", "inventory", "score", "quit", "back"]
+    choice = ""
 
     while not PLAYER.victory:
-        location = WORLD.get_location(PLAYER.x, PLAYER.y)
+        location = WORLD.get_location(PLAYER.x, PLAYER.y, True, PLAYER)
 
         #put in locations, everytime the reach closer to the destination they will earn two points
         #when they reach farther from the location they will lose 1 point
         #PLAYER.points+= 2
         #PLAYER.points-= 1
 
-        print("Here is a map of Univeristy of Toronto")
+        print("You've got an important exam coming up this evening, and you've been studying for weeks.")
+        print("Last night was a particularly late night on campus. You had difficulty focusing, so rather than staying in one place, you studied in various places throughout the building as the night progressed.")
+        print("Unfortunately, when you woke up this morning, you were missing some important exam-related items. You cannot find your T-card, and you're pretty sure that you're not going to get into tonight's exam without it.")
+        print("Also, you seem to have misplaced your lucky exam pen -- even if they let you in, you can't possibly write with another pen!")
+        print("Finally, your instructor for the course is nicer than your CSC108 instructors in that they are allowing you one handwritten page of information in the exam.")
+        print("Last night, you painstakingly crammed as much material onto a single page as humanly possible, but that's missing, too!")
+        print("All of this stuff must be around the building somewhere! Can you find all of it before your exam starts tonight?")
+
+        print("Here is a map of Univeristy of Toronto Mississauga, you are ")
         print("                       ________________")
         print("                       |    library   |")
         print("                       |   3th floor  |")

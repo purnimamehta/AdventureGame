@@ -176,9 +176,9 @@ class World:
         :return:
         '''
 
-        self.map = self.load_map(mapdata) # The map MUST be stored in a nested list as described in the docstring for load_map() below
-        self.locations = self.load_locations(locdata) #You may choose how to store location and item data.
-        self.load_items(itemdata) # This data must be stored somewhere. Up to you how you choose to do it...
+        self.map = self.load_map(mapdata)
+        self.locations = self.load_locations(locdata)
+        self.items = self.load_items(itemdata)
 
     def load_map(self, filename):
         '''
@@ -196,16 +196,16 @@ class World:
         -1  5   6
         '''
 
-        file = open(filename)
-        l = []
-        for line in file:
-            line = line.strip()
-            line = line.split()
-            line = map(int,line)
-            l.append(line)
-        file.close()
+        file = open(filename, "r")
+        new_map = []
 
-        return l
+        for line in file:
+            new_map.append(
+                [int(i) for i in line.strip().split()]
+            )
+
+        file.close()
+        return new_map
 
 
     def load_locations(self, filename):
@@ -233,43 +233,21 @@ class World:
         Go West
         '''
 
-        file = open(filename , 'r')
-        return_location = {}
+        location = []
+        file = open(filename, "r")
         for line in file:
 
-            index_of_location = ""
-            points = ""
-            briefdesc = ""
-            longdesc = ""
-            commands = []
+            brief_description = line.strip()
+            long_description = next(file)
 
-            items = None
-            times_visted = 0
+            locations = next(file)
+            while locations is not "END\n":
+                long_description += locations
+                locations = next(file)
 
-            if "Location:" in line:
-                index_of_location = int(line.split(" ")[1].rstrip("\n"))
-            line = file.readline()
-            if "points:" in line:
-                points = int(line.split(" ")[1].rstrip("\n"))
-            line = file.readline()
+            location.append(Location(brief_description, long_description))
 
-            if "brief description:" in line:
-                briefdesc = line.strip("brief description:")
-            line = file.readline()
-
-            if "long description:" in line:
-                longdesc = line.strip("long description:").rstrip("\n")
-            line = file.readline()
-
-            if "list of commands:" in line:
-                commands = line.strip("list of commands:").rstrip("\n")
-                commands = commands.split(",")
-                print(commands)
-            file.readline()
-            file.readline()
-            location = Location(index_of_location, briefdesc, longdesc, points, commands, items)
-            print(str(location))
-            return_location[index_of_location] = location
+        file.close()
         return location
 
 
