@@ -1,0 +1,25 @@
+For the enhancement a code was implanted to create a beep sound.
+The sound is use to indicate if the player was won, meaning that
+they have reached the Institutional Centre building, which is also known as IB to write their exam.
+The first line of code is to import winsound, which is a module to provide access to basic sound-playing machinery only on Windows.
+The parameters are; frequency and duration. The frequency is in hertz while the duration specifies the number
+of milliseconds of the sound should last.  The next line of code is to assign frequency, short freq, to a value.
+Frequency was assigned to 2500 hertz. Which means it goes through one cycle per second but in this case it will
+be millisecond. The next line of code is the duration, which is assigned to 1000 milliseconds. Lastly, the last line
+of code is to play the beep sound which is winsound.Beep(freq, duration). After this last line, when the program runs
+and if and only if the player reach’s to the IB building then a beep noise will be played indicating that they have won.
+
+Another enhancement was the blue print of University of Toronto. It was displayed at the beginning of the program when it is run through.
+It’s to give the player an idea where they should go since every programmer should always have some sort of lay out, planning before they start anything.
+There is the third floor location of the library which is the farthest from the IB building. Following that there is the study room to its south
+which is then followed up by a long path connecting to the warm welcoming Starbucks to its south and then a wilderness trail to its east.
+Deerfield is located north of the wilderness trail. To the South West of the third floor of the library there is the second floor.
+The bathroom is located south which there is then a path connecting to a catwalk which is then connecting to Starbucks.
+Finally Starbucks is connected to a hallway which then leads to IB where the player can write their exam. Another enhancement was
+the blue print of University of Toronto. It was displayed at the beginning of the program when it is run through. It’s to give the player
+an idea where they should go since every programmer should always have some sort of lay out, planning before they start anything.
+There is the third floor location of the library which is the farthest from the IB building. Following that there is the study room
+to its south which is then followed up by a long path connecting to the warm welcoming Starbucks to its south and then a wilderness
+trail to its east. Deerfield is located north of the wilderness trail. To the South West of the third floor of the library there is
+the second floor. The bathroom is located south which there is then a path connecting to a catwalk which is then connecting to Starbucks.
+Finally Starbucks is connected to a hallway which then leads to IB where the player can write their exam.
