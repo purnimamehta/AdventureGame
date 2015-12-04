@@ -19,8 +19,7 @@ if __name__ == "__main__":
 
         #put in locations, everytime the reach closer to the destination they will earn two points
         #when they reach farther from the location they will lose 1 point
-        #PLAYER.points+= 2
-        #PLAYER.points-= 1
+
 
         print("You've got an important exam coming up this evening, and you've been studying for weeks.")
         print("Last night was a particularly late night on campus. You had difficulty focusing, so rather than staying in one place, you studied in various places throughout the building as the night progressed.")
@@ -75,12 +74,12 @@ if __name__ == "__main__":
                 print(option)
             choice = input("\nChoose action: ")
 
-            if choice =="look":
-                Location.get_brief_description()
+            if choice == "look":
+                print (location.get_brief_description())
             elif choice == "inventory":
-                inventory = player.get_inventory()
+                print(PLAYER.get_inventory())
             elif choice == "score":
-                print(score)
+                print("Your score is: " + score)
             elif choice == "quit":
                 exit()
             elif choice == "back":
@@ -104,17 +103,4 @@ if __name__ == "__main__":
             PLAYER.move_west()
             location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-
-   # def score(score):
-#    print("Score:" +str(score))
-
-        # CALL A FUNCTION HERE TO HANDLE WHAT HAPPENS UPON USER'S CHOICE
-        #    REMEMBER: the location = w.get_location(p.x, p.y) at the top of this loop will update the location if the
-        #               choice the user made was just a movement, so only updating player's position is enough to change
-        #               the location to the next appropriate location
-        # Possibilities: a helper function do_action(WORLD, PLAYER, location, choice)
-        # OR A method in World class WORLD.do_action(PLAYER, location, choice)
-        # OR Check what type of action it is, then modify only player or location accordingly
-        # OR Method in Player class for move or updating inventory
-        # OR Method in Location class for updating location item info, or other location data
-        # etc....
+        return

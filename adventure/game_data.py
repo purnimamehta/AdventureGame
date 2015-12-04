@@ -1,7 +1,5 @@
 class Location:
-
-
-    def __init__(self,position, brief_description,long_description,commands,items, times_visited):
+    def __init__(self, position, brief_description, long_description, commands, items, times_visited):
         '''Creates a new location.
         ADD NEW ATTRIBUTES TO THIS CLASS HERE TO STORE DATA FOR EACH LOCATION.
 
@@ -33,7 +31,6 @@ class Location:
         times_visited: library visited: 1
         '''
 
-
         self.position = position
         self.brief_description = brief_description
         self.long_description = long_description
@@ -41,10 +38,7 @@ class Location:
         self.items = items
         self.times_visited = 0
 
-
-
-
-    def get_brief_description (self):
+    def get_brief_description(self):
         '''Return str brief description of location.
         :param:
         :return: brief description
@@ -54,8 +48,7 @@ class Location:
 
         return self.brief_description
 
-
-    def get_full_description (self):
+    def get_full_description(self):
         '''Return str long description of location.
         :param:
         :return: full  description
@@ -64,7 +57,6 @@ class Location:
         '''
 
         return self.long_description
-
 
     def available_actions(self):
         '''
@@ -80,16 +72,9 @@ class Location:
 
         return self.commands
 
-    def __str__(self):
-        return self.brief_description + " | " + self.long_description + " | " + self.position
-
-
-
-
 
 class Item:
-
-    def __init__ (self, name, start, target, target_points):
+    def __init__(self, name, start, target, target_points):
         '''Create item referred to by string name, with integer "start"
         being the integer identifying the item's starting location,
         the integer "target" being the item's target location, and
@@ -118,7 +103,7 @@ class Item:
         self.target = target
         self.target_points = target_points
 
-    def get_starting_location (self):
+    def get_starting_location(self):
         '''Return int location where item is first found.
         :param:
         :return: the integer location where the item is first located at
@@ -136,7 +121,7 @@ class Item:
 
         return self.name
 
-    def get_target_location (self):
+    def get_target_location(self):
         '''Return item's int target location where it should be deposited.
         :param:
         :return: items destination coordinates
@@ -146,7 +131,7 @@ class Item:
         '''
         return self.target
 
-    def get_target_points (self):
+    def get_target_points(self):
         '''Return int points awarded for depositing the item in its target location.
         :param:
         :return: the points for putting the item into its proper location
@@ -159,7 +144,6 @@ class Item:
 
 
 class World:
-
     def __init__(self, mapdata, locdata, itemdata):
         '''
         Creates a new World object, with a map, and data about every location and item in this game world.
@@ -207,7 +191,6 @@ class World:
         file.close()
         return new_map
 
-
     def load_locations(self, filename):
         '''
         Store all locations from filename (locations.txt) into the variable "self.locations"
@@ -233,23 +216,29 @@ class World:
         Go West
         '''
 
-        location = []
+        items = None
+        times_visted = 0
+        brief_description = ""
+        long_description = ""
+        commands = []
+        index_of_location = ""
+
         file = open(filename, "r")
         for line in file:
 
-            brief_description = line.strip()
-            long_description = next(file)
+            if "LOCATION" in line:
+                index_of_location = int(line.split(" ")[1].strip("\n"))
 
-            locations = next(file)
-            while locations is not "END\n":
-                long_description += locations
-                locations = next(file)
+            if "brief description:" in line:
+                brief_description = line.strip("brief description:")
 
-            location.append(Location(brief_description, long_description))
+            if "long description:" in line:
+                long_description = line.strip("long description:").strip("\n")
+
+        location = Location(index_of_location, brief_description, long_description, commands, items, times_visted)
 
         file.close()
         return location
-
 
     def load_items(self, filename):
         '''
@@ -282,7 +271,6 @@ class World:
 
         return return_items
 
-
     def get_location(self, x, y):
         '''Check if location exists at location (x,y) in world map.
         Return Location object associated with this location if it does. Else, return None.
@@ -301,3 +289,14 @@ class World:
                 return Location
             else:
                 return None
+
+        for column in range(len(self.map)):
+            for row in range(len(self.map[column])):
+                for location in self.locations:
+                    if int(location.get_position()) == self.map[column][row]:
+                        if (row == x and column == y):
+                            return location
+        return None
+
+x = World("map.txt","locations.txt","items.txt")
+print(x.load_locations("locations.txt"))
