@@ -255,40 +255,45 @@ END
 LOCATION 40 - hallway
 points 0
 brief description: This is the hallway that leads to IB where your exam is being held.
-long description:
+long description: This is a hallway that leads to IB. If you keep going down this path you will notice the beautiful glass windows and the E.T. fingers.
+This hallway leads to IB. Let's go check it out.
 END
 
 
 LOCATION 41 - path
 points 0
-brief description:
-long description:
+brief description: This is the hallway that leads to IB where your exam is being held.
+long description: This is a hallway that leads to IB. If you keep going down this path you will notice the beautiful glass windows and the E.T. fingers.
+This hallway leads to IB.
 END
 
 
 LOCATION 42 - path
 points 0
-brief description:
-long description:
+brief description: This is the hallway that leads to IB where your exam is being held.
+long description: This is a hallway that leads to IB. If you keep going down this path you will notice the beautiful glass windows and the E.T. fingers.
+This hallway leads to IB.
 END
 
 
 LOCATION 43 - path
 0
-brief description:
-long description:
+brief description: This is the hallway that leads to IB where your exam is being held.
+long description: This is a hallway that leads to IB. If you keep going down this path you will notice the beautiful glass windows and the E.T. fingers.
+This hallway leads to IB.
 END
 
 
 LOCATION 44 - path
 points 0
-brief description:
-long description:
+brief description: This is the hallway that leads to IB where your exam is being held.
+long description: This is a hallway that leads to IB. If you keep going down this path you will notice the beautiful glass windows and the E.T. fingers.
+This hallway leads to IB.
 END
 
 
 LOCATION 45 - IB
 points 5
 brief description: This is IB.
-long description:
+long description: You're in IB! Your exam is held here so once you have found your items, come here.
 END
