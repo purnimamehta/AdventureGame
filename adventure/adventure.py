@@ -1,11 +1,11 @@
 from game_data import World, Item, Location
 from player import Player
-import winsound
+#import winsound
 
 
-freq = 2500
-duration = 1000
-winsound.Beep(freq, duration)
+#freq = 2500
+#duration = 1000
+#winsound.Beep(freq, duration)
 
 if __name__ == "__main__":
     WORLD = World("map.txt", "locations.txt", "items.txt")
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     choice = ""
 
     while not PLAYER.victory:
-        location = WORLD.get_location(PLAYER.x, PLAYER.y, True, PLAYER)
+        location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
         #put in locations, everytime the reach closer to the destination they will earn two points
         #when they reach farther from the location they will lose 1 point
@@ -79,7 +79,7 @@ if __name__ == "__main__":
             elif choice == "inventory":
                 print(PLAYER.get_inventory())
             elif choice == "score":
-                print("Your score is: " + score)
+                print("Your score is: " + points)
             elif choice == "quit":
                 exit()
             elif choice == "back":
@@ -102,5 +102,3 @@ if __name__ == "__main__":
         elif choice == 'west':
             PLAYER.move_west()
             location = WORLD.get_location(PLAYER.x, PLAYER.y)
-
-        return

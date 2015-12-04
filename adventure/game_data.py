@@ -284,19 +284,10 @@ class World:
         player location will move ( 3, 4)
         '''
 
-        for i in self.locations:
-            if y > 0 and x > 0:
+
+        for location in self.map:
+            if y == y and x == x:
                 return Location
             else:
-                return None
+                return location
 
-        for column in range(len(self.map)):
-            for row in range(len(self.map[column])):
-                for location in self.locations:
-                    if int(location.get_position()) == self.map[column][row]:
-                        if (row == x and column == y):
-                            return location
-        return None
-
-x = World("map.txt","locations.txt","items.txt")
-print(x.load_locations("locations.txt"))
